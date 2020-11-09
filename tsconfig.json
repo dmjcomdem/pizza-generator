@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@/*": ["src/*"]
+        },
+        "target": "ESNext",
+        "module": "commonjs",
+        "downlevelIteration": true,
+        "allowJs": true,
+        "jsx": "react",
+        "sourceMap": true,
+        "strict": true,
+        "esModuleInterop": true,
+        "noImplicitAny": true
+    },
+    "exclude": ["node_modules"],
+    "include": ["src/**/*"]
+}

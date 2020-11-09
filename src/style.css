@@ -1,0 +1,25 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    min-height: 100vh;
+}
+
+body {
+    font: 1rem/1.4 system-ui;
+    background: black;
+    color: white;
+    display: grid;
+    place-items: center;
+    margin: 0;
+    text-align: center;
+}
+
+img {
+    width: 100px;
+}
