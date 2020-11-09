@@ -1,7 +1,7 @@
 {
     "name": "pizza-generator",
     "version": "1.0.0",
-    "description": "",
+    "description": "Обучающий проект сайта-приложения по заказу пиццы",
     "private": true,
     "author": "dmjcomdem",
     "license": "ISC",
