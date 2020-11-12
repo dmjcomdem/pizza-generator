@@ -1,6 +1,6 @@
 module.exports = {
     clearMocks: true,
-    setupFilesAfterEnv: ['<rootDir>/jest.settings.js'],
+    setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
     transform: {
         '^.+\\.(js|jsx|ts|tsx)$': '<rootDir>/node_modules/babel-jest',
         '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2|svg)$':
