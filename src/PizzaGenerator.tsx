@@ -1,6 +1,7 @@
 import React from 'react';
 import { data } from '@/data';
-import { Checkbox, RadioButton } from './components';
+import { OrderPizza } from './OrderPizza';
+import { Checkbox, RadioButton } from '@/components';
 
 export const PizzaGenerator: React.FC = () => {
     const [orderPizza, setOrderPizza] = React.useState(false);
@@ -46,7 +47,7 @@ export const PizzaGenerator: React.FC = () => {
             getPriceIngredient(meats);
 
         setTotalPrice(sumPrice);
-    }, [size.price, cheeses, vegetables, meats]);
+    }, [size, cheeses, vegetables, meats]);
 
     return (
         <>
@@ -150,46 +151,15 @@ export const PizzaGenerator: React.FC = () => {
             )}
 
             {orderPizza && (
-                <>
-                    <h1>Данные пиццы</h1>
-                    <dl>
-                        <dt>Размер:</dt>
-                        <dd>{size.size} см.</dd>
-
-                        <dt>Тесто:</dt>
-                        <dd>{dough.name}</dd>
-
-                        <dt>Соус:</dt>
-                        <dd>{sauce.name}</dd>
-
-                        {!!cheeses.length && (
-                            <>
-                                <dt>Cыр:</dt>
-                                {cheeses.map(cheese => (
-                                    <dd key={cheese.id}>{cheese.name}</dd>
-                                ))}
-                            </>
-                        )}
-
-                        {!!vegetables.length && (
-                            <>
-                                <dt>Овощи:</dt>
-                                {vegetables.map(vegetable => (
-                                    <dd key={vegetable.id}>{vegetable.name}</dd>
-                                ))}
-                            </>
-                        )}
-
-                        {!!meats.length && (
-                            <>
-                                <dt>Мясо:</dt>
-                                {meats.map(meat => (
-                                    <dd key={meat.id}>{meat.name}</dd>
-                                ))}
-                            </>
-                        )}
-                    </dl>
-                </>
+                <OrderPizza
+                    size={size}
+                    dough={dough}
+                    sauce={sauce}
+                    cheeses={cheeses}
+                    vegetables={vegetables}
+                    meats={meats}
+                    totalPrice={totalPrice}
+                />
             )}
         </>
     );

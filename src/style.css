@@ -27,14 +27,20 @@ body {
 h1 {
     margin: 0 0 1rem;
     padding: 0;
-    color: cornflowerblue;
+    color: #f7894a;
+}
+
+p {
+    margin: 0 0 1rem;
+    padding: 0;
 }
 
 .card {
-    min-width: 450px;
+    width: 450px;
     background: white;
     padding: 2rem;
     border-radius: 1rem;
+    color: #4b4b7c;
     box-shadow: 4px 12px 24px rgba(0, 0, 0, 0.1);
 }
 
@@ -61,10 +67,19 @@ button {
     box-shadow: 4px 12px 24px rgba(0, 0, 0, 0.1);
 }
 
-dt {
-    font-weight: bold;
+.list {
+    padding: 0;
+    margin: 0 0 2rem -0.3rem;
 }
 
-dd {
-    margin: 0 0 0.2rem;
+.list > li {
+    display: inline-block;
+    padding: 0.3rem 0.3rem 0;
+}
+
+.list > li:not(:last-child)::after {
+    content: ' • ';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
 }

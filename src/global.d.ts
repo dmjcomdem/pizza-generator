@@ -48,7 +48,8 @@ type IngredientValuesType = {
  * Configurable pizza parameters
  */
 type PizzaType = {
-    size: SizeType['size'] | null;
-    dough: DoughType | null;
-    sauce: SauceType | null;
+    size: SizeType;
+    dough: DoughType;
+    sauce: SauceType;
+    totalPrice: number;
 } & IngredientValuesType;
