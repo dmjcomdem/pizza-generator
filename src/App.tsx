@@ -3,7 +3,7 @@ import { PizzaGenerator } from '@/PizzaGenerator';
 
 export const App: React.FC = () => {
     return (
-        <section className="card">
+        <section className="card" data-testid="app-container">
             <PizzaGenerator />
         </section>
     );
